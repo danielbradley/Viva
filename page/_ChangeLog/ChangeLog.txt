@@ -1,0 +1,8 @@
+Change Log for Viva
+-------------------
+
+0.1.1	Menu.php (kludge)
+
+Edited Menu PHP so that if a user is authenticated the menu items
+"Join Today", "Subscribe Today", and "Enquire Today" will not be
+shown.

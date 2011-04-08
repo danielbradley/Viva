@@ -1,0 +1,15 @@
+/*
+//	Copyright (c) 2009, 2010 Daniel Robert Bradley. All rights reserved.
+//	This software is distributed under the terms of the GNU Lesser General Public License version 2.1
+*/
+
+DIV.edit_table TABLE.edit_table                     { border-collapse: collapse; }
+DIV.edit_table TABLE.edit_table                     { width: 510px; }
+
+DIV.edit_table TABLE.edit_table TH.edit_table_plus  { border: solid 1px black; width: 40px; }
+DIV.edit_table TABLE.edit_table TH.edit_table_title { border: solid 1px black; }
+DIV.edit_table TABLE.edit_table TH.edit_table_edit  { border: solid 1px black; width: 70px; }
+DIV.edit_table TABLE.edit_table TD.edit_table       { border: solid 1px black; }
+DIV.edit_table TABLE.edit_table TD.edit_table_item  { border: solid 1px black; }
+DIV.edit_table TABLE.edit_table TD.edit_table_edit  { border: solid 1px black; width: 70px; }
+DIV.edit_table TABLE.edit_table TD.edit_table_edit  { text-align: center; }
