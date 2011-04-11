@@ -21,7 +21,7 @@ class EmailAddress
 	
 		if ( $this->email )
 		{
-			$list = split( '@', $this->email );
+			$list = explode( '@', $this->email );
 			
 			if ( "2" == count( $list ) )
 			{

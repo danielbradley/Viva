@@ -50,8 +50,6 @@ class Date
 	{
 		$tod = ( $this->hour < 12 ) ? "am" : "pm";
 		
-		$hour = ( 0 < $this->hour ) ?  : 12;
-	
 		switch ( $this->hour )
 		{
 		case "0":
