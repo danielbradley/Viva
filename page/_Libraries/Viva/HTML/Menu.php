@@ -32,7 +32,7 @@ class Menu extends Element
 				
 					if ( $filename == $script_filename )
 					{
-						$out->println( "<li $first>$id</li>" );
+						$out->println( "<li $first><span>$id</span></li>" );
 					}
 					else
 					{

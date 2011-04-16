@@ -85,6 +85,14 @@ class Date
 	function getM() { return $this->month; }
 	function getY() { return $this->year;  }
 	
+	function getDayOfWeek()
+	{
+		$date = $this->year . "-" . $this->month . "-" . $this->day;
+		$time = strtotime( $date );
+		
+		return Date::getDayOfWeekLabel( date('w', $time ) );
+	}
+	
 	static function extract( $prefix, $array )
 	{
 		$y = array_get( $prefix . "_year",  $array );
@@ -97,6 +105,37 @@ class Date
 	static function today()
 	{
 		return gmdate( "Y-m-d", time() );
+	}
+	
+	static function getDayOfWeekLabel( $d )
+	{
+		$day = "";
+		switch( $day )
+		{
+		case 0:
+			$day = "Sunday";
+			break;
+		case 1:
+			$day = "Monday";
+			break;
+		case 2:
+			$day = "Tuesday";
+			break;
+		case 3:
+			$day = "Wednesday";
+			break;
+		case 4:
+			$day = "Thursday";
+			break;
+		case 5:
+			$day = "Friday";
+			break;
+		case 6:
+			$day = "Saturday";
+			break;
+		}
+		
+		return $day;
 	}
 	
 	static function getMonth( $month )
