@@ -56,7 +56,10 @@ class Breadcrumbs
 		$i   = $index - 1;
 		$max = count( $this->labels );
 
-		$this->urls[$max+$i] = $url;
+		$x = $max+$i;
+
+		if ( array_key_exists( $x, $this->urls ) )
+			$this->urls[$x] = $url;
 	}
 
 	function getURL( $index )
@@ -64,7 +67,12 @@ class Breadcrumbs
 		$i   = $index - 1;
 		$max = count( $this->labels );
 
-		return $this->urls[$max+$i];
+		$x   = $max+$i;
+
+		$ret = PAGE;
+		if ( array_key_exists( $x, $this->urls ) )
+			$ret = $this->urls[$x];
+		return $ret;
 	}
 	
 	function getLastLabel()
