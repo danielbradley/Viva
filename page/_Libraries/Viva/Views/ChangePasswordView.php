@@ -19,7 +19,7 @@ class ChangePasswordView extends View
 		{
 			$out->inprint( "<div class='box pad'>" );
 			{
-				$out->println( "<div class='heading1'><span>Change Password</span></div>" );
+				$out->println( "<div class='heading1'><h1>Change Password</h1></div>" );
 				
 				$out->inprint( "<form method='post' action=''>" );
 				{
