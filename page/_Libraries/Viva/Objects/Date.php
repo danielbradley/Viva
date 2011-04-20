@@ -46,6 +46,26 @@ class Date
 		return $this->time;
 	}
 
+	function getHHMM()
+	{
+		$tod = ( $this->hour < 12 ) ? "am" : "pm";
+		
+		switch ( $this->hour )
+		{
+		case "0":
+			$hour = "12";
+			break;
+		case "12":
+			$hour = "12";
+			break;
+		default:
+			$hour = $this->hour % 12;
+		}
+		if ( 1 == strlen( $hour ) ) $hour = "0" . $hour;
+
+		return "$hour:$this->min $tod";
+	}
+
 	function getTime()
 	{
 		$tod = ( $this->hour < 12 ) ? "am" : "pm";
@@ -69,11 +89,35 @@ class Date
 		return $this->day . "/" . $this->month . "/" . $this->year;
 	}
 
+	function getDMonth()
+	{
+		$day = ltrim( $this->day, '0' );
+			
+		return $day . " " . Date::getMonth( $this->month );
+	}
+
+	function getDDMonth()
+	{
+		return $this->day . " " . Date::getMonth( $this->month );
+	}
+
+	function getDDMon()
+	{
+		return $this->day . " " . substr( Date::getMonth( $this->month ), 0, 3 );
+	}
+
 	function getDMonthY()
 	{
 		$day = ltrim( $this->day, '0' );
 			
 		return $day . " " . Date::getMonth( $this->month ) . " " . $this->year;
+	}
+
+	function getDMonthYY()
+	{
+		$day = ltrim( $this->day, '0' );
+			
+		return $day . " " . Date::getMonth( $this->month ) . " " . substr( $this->year, 2, 2 );
 	}
 
 	function getMonthYear()

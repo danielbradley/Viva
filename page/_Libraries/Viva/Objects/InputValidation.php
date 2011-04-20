@@ -98,6 +98,16 @@ class InputValidation
 						$this->required["$name_invalid"] = $text;
 					}
 					break;
+				case "FILE":
+					if ( array_key_exists( $name, $_FILES ) )
+					{
+						$this->required["$name"] = "";
+					}
+					else
+					{
+						$this->required["$name"] = $text;
+					}
+					break;
 				default:
 					if ( "" == array_get( $name, $this->request ) )
 					{
