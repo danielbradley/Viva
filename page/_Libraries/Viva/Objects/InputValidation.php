@@ -294,6 +294,13 @@ class InputValidation
 		$value = $this->value( $name );
 		return "<span class='required' id='required_$name' $value>Required</span>";
 	}
+
+	function getInvalid( $name )
+	{
+		$invalid = $name . "_invalid";
+		$value = $this->value( $invalid );
+		return "<span class='required' id='required_$invalid' $value>Invalid</span>";
+	}
 }
 
 ?>
